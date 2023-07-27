@@ -39,6 +39,6 @@ public class PlayerMovement : MonoBehaviour
            walk = false;
         }
 
-        this.targetAnimator.SetBool("Walk", walk);
+        targetAnimator.SetBool("Walk", walk);
     }
 }
