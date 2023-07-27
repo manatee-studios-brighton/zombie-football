@@ -5,28 +5,40 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed;
-    
-    private Rigidbody _rb;
-    
+    [SerializeField] private float speed = 5f;
+    [SerializeField] private ConfigurableJoint hipJoint;
+    [SerializeField] private Rigidbody hip;
+
+    [SerializeField] private Animator targetAnimator;
+
+    private bool walk = false;
     // Start is called before the first frame update
     void Start()
     {
-        _rb = GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
-        {
-            transform.eulerAngles = new Vector3( 0, Mathf.Atan2( Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * 180 / Mathf.PI, 0 );
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
 
-            _rb.velocity = transform.forward * speed * Time.deltaTime;
-        }
-        else
+        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+
+        if (direction.magnitude >= 0.1f)
         {
-            _rb.velocity = Vector3.zero;
+            float targetAngle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
+
+            hipJoint.targetRotation = Quaternion.Euler(0f, targetAngle, 0f);
+
+            hip.AddForce(direction * this.speed);
+
+            walk = true;
+        }  else {
+           walk = false;
         }
+
+        this.targetAnimator.SetBool("Walk", walk);
     }
 }
