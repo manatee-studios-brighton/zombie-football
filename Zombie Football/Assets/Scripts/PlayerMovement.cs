@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -36,9 +35,9 @@ public class PlayerMovement : MonoBehaviour
 
             walk = true;
         }  else {
-           walk = false;
+            walk = false;
         }
 
-        targetAnimator.SetBool("Walk", walk);
+        targetAnimator.SetBool("Walk", this.walk);
     }
 }
