@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class CharacterController : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpForce = 5f;
@@ -12,41 +12,22 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator targetAnimator;
 
     private bool _walk;
-    private static readonly int AnimatorWalk = Animator.StringToHash("Walk");
+    private bool _header;
     
+    private static readonly int AnimatorWalk = Animator.StringToHash("Walk");
+    private static readonly int AnimatorHeader = Animator.StringToHash("Headering");
+
 
     // Update is called once per frame
     void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
-
-        if (direction.magnitude >= 0.1f)
-        {
-            float targetAngle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
-
-            hipJoint.targetRotation = Quaternion.Euler(0f, targetAngle, 0f);
-
-            hip.AddForce(direction * this.speed);
-
-            _walk = true;
-        }
-        else
-        {
-            _walk = false;
-        }
-
-        targetAnimator.SetBool(AnimatorWalk, this._walk);
+        MoveCharacter();
     }
 
     void FixedUpdate()
     {
-        if (Input.GetButton("Jump") && IsGrounded())
-        {
-            hip.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        }
+        CharacterJump();
+        CharacterHeader();
     }
 
     private bool IsGrounded()
@@ -59,8 +40,44 @@ public class PlayerMovement : MonoBehaviour
         {
             return true;
         }
-
         return false;
+    }
 
+    private void MoveCharacter()
+    {
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+
+        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+
+        if (direction.magnitude >= 0.1f)
+        {
+            float targetAngle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
+
+            hipJoint.targetRotation = Quaternion.Euler(0f, targetAngle, 0f);
+
+            hip.AddForce(direction * speed);
+
+            _walk = true;
+        }
+        else
+        {
+            _walk = false;
+        }
+
+        targetAnimator.SetBool(AnimatorWalk, _walk);
+    }
+
+    private void CharacterJump()
+    {
+        if (Input.GetButton("Jump") && IsGrounded())
+        {
+            hip.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+    }
+
+    private void CharacterHeader()
+    {
+        targetAnimator.SetBool(AnimatorHeader,Input.GetButton("Header"));
     }
 }
