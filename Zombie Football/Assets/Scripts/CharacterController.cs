@@ -14,12 +14,15 @@ public class CharacterController : MonoBehaviour
     private bool _walking;
     private bool _headering;
     private bool _jumping;
+    private bool _kicking;
     
     private bool _canHeader = true;
     private bool _canJump = true;
+    private bool _canKick = true;
     
     private static readonly int AnimatorWalk = Animator.StringToHash("Walk");
     private static readonly int AnimatorHeader = Animator.StringToHash("Headering");
+    private static readonly int AnimatorKick = Animator.StringToHash("Kicking");
 
 
     // Update is called once per frame
@@ -31,6 +34,7 @@ public class CharacterController : MonoBehaviour
     void FixedUpdate()
     {
         CharacterJump();
+        CharacterKick();
         CharacterHeader();
     }
 
@@ -74,10 +78,51 @@ public class CharacterController : MonoBehaviour
 
     private void CharacterJump()
     {
-        if (Input.GetButton("Jump") && IsGrounded())
+        //If currently jumping and the character is grounded, set the jumping variable to false
+        if (_jumping && IsGrounded())
         {
+            _jumping = false;
+        }
+        
+        //If able to jump and the button is pressed, disable the ability to jump and set currently jumping true
+        if (_canJump && Input.GetButton("Jump"))
+        {
+            _canJump = false;
+            _jumping = true;
             hip.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
+        
+        //If not currently jumping and not pressing the button, set the ability to jump to be true
+        if (!_canJump && !Input.GetButton("Jump") && !_jumping)
+        {
+            _canJump = true;
+        }
+        
+    }
+
+    private void CharacterKick()
+    {
+        //If currently kicking and the animation finishes, set the headering variable to false
+        if (_kicking && targetAnimator.GetCurrentAnimatorStateInfo(2).normalizedTime >= 1)
+        {
+            _kicking = false;
+        }
+        
+        //If able to kick and the button is pressed, disable the ability to header and set currently kicking true
+        if (_canHeader && Input.GetButton("Kick"))
+        {
+            _canKick = false;
+            _kicking = true;
+        }
+        
+        //If not currently kicking and not pressing the button, set the ability to kick to be true
+        if (!_canKick && !Input.GetButton("Kick") && !_kicking)
+        {
+            _canKick = true;
+        }
+        
+        //animate whether or not kicking
+        targetAnimator.SetBool(AnimatorKick,_kicking);
     }
 
     private void CharacterHeader()
