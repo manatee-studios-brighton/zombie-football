@@ -11,8 +11,12 @@ public class CharacterController : MonoBehaviour
 
     [SerializeField] private Animator targetAnimator;
 
-    private bool _walk;
-    private bool _header;
+    private bool _walking;
+    private bool _headering;
+    private bool _jumping;
+    
+    private bool _canHeader = true;
+    private bool _canJump = true;
     
     private static readonly int AnimatorWalk = Animator.StringToHash("Walk");
     private static readonly int AnimatorHeader = Animator.StringToHash("Headering");
@@ -58,14 +62,14 @@ public class CharacterController : MonoBehaviour
 
             hip.AddForce(direction * speed);
 
-            _walk = true;
+            _walking = true;
         }
         else
         {
-            _walk = false;
+            _walking = false;
         }
 
-        targetAnimator.SetBool(AnimatorWalk, _walk);
+        targetAnimator.SetBool(AnimatorWalk, _walking);
     }
 
     private void CharacterJump()
@@ -78,6 +82,26 @@ public class CharacterController : MonoBehaviour
 
     private void CharacterHeader()
     {
-        targetAnimator.SetBool(AnimatorHeader,Input.GetButton("Header"));
+        //If currently headering and the animation finishes, set the headering variable to false
+        if (_headering && targetAnimator.GetCurrentAnimatorStateInfo(1).normalizedTime >= 1)
+        {
+            _headering = false;
+        }
+        
+        //If able to header and the button is pressed, disable the ability to header and set currently headering true
+        if (_canHeader && Input.GetButton("Header"))
+        {
+            _canHeader = false;
+            _headering = true;
+        }
+        
+        //If not currently headering and not pressing the button, set the ability to header to be true
+        if (!_canHeader && !Input.GetButton("Header") && !_headering)
+        {
+            _canHeader = true;
+        }
+        
+        //animate whether or not headering
+        targetAnimator.SetBool(AnimatorHeader,_headering);
     }
 }
