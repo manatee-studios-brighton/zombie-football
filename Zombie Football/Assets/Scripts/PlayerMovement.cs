@@ -1,26 +1,19 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpForce = 5f;
-    
+    [SerializeField] private float distToGround = 0.6f;
+
     [SerializeField] private ConfigurableJoint hipJoint;
     [SerializeField] private Rigidbody hip;
 
     [SerializeField] private Animator targetAnimator;
 
-    private bool walk = false;
-
-    private bool canJump = true;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    private bool _walk;
+    private static readonly int AnimatorWalk = Animator.StringToHash("Walk");
+    
 
     // Update is called once per frame
     void Update()
@@ -38,38 +31,36 @@ public class PlayerMovement : MonoBehaviour
 
             hip.AddForce(direction * this.speed);
 
-            walk = true;
-        }  else {
-            walk = false;
+            _walk = true;
+        }
+        else
+        {
+            _walk = false;
         }
 
-        targetAnimator.SetBool("Walk", this.walk);
+        targetAnimator.SetBool(AnimatorWalk, this._walk);
     }
 
     void FixedUpdate()
     {
-        if (Input.GetButton("Jump") && canJump)
+        if (Input.GetButton("Jump") && IsGrounded())
         {
-            hip.AddForce(Vector3.up * jumpForce,ForceMode.Impulse);
-            canJump = false;
+            hip.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private bool IsGrounded()
     {
-        Debug.Log("HIT");
-        if (collision.gameObject.CompareTag($"ground"))
+        int layerMask = 1 << 6;
+
+        layerMask = ~layerMask;
+
+        if (Physics.Raycast(hip.position, transform.TransformDirection(Vector3.down),distToGround, layerMask))
         {
-            Debug.Log("GROUND");
-            canJump = true;
+            return true;
         }
-    }
-    
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.CompareTag($"ground"))
-        {
-            canJump = false;
-        }
+
+        return false;
+
     }
 }
