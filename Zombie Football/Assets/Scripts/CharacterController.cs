@@ -109,7 +109,7 @@ public class CharacterController : MonoBehaviour
         }
         
         //If able to kick and the button is pressed, disable the ability to header and set currently kicking true
-        if (_canHeader && Input.GetButton("Kick"))
+        if (_canKick && Input.GetButton("Kick"))
         {
             _canKick = false;
             _kicking = true;
