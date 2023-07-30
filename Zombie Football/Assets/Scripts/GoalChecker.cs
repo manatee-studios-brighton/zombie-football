@@ -25,6 +25,9 @@ public class GoalChecker : MonoBehaviour
         {
             goalScored = true;
             other.gameObject.transform.position = new Vector3(0, 5, 0);
+            
+            Rigidbody rb = other.GetComponent<Rigidbody>();
+            rb.velocity = Vector3.zero;
         }
     }
 }
