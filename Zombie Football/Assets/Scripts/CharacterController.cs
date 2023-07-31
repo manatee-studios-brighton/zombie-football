@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class CharacterController : MonoBehaviour
 {
@@ -37,7 +38,7 @@ public class CharacterController : MonoBehaviour
     private bool _jumpButtonDown;
     private bool _headerButtonDown;
     private bool _specialButtonDown;
-
+    private bool _menuButtonDown;
 
     /*
      * UNITY UPDATE CALLS
@@ -52,6 +53,10 @@ public class CharacterController : MonoBehaviour
         CharacterJump();
         CharacterKick();
         CharacterHeader();
+
+        if (_menuButtonDown)
+            SceneManager.LoadScene("Scenes/MainMenu", LoadSceneMode.Single);
+        
     }
     
     /*
@@ -181,4 +186,6 @@ public class CharacterController : MonoBehaviour
     public void OnKick(InputAction.CallbackContext ctx) => _kickButtonDown = Math.Abs(ctx.ReadValue<float>() - 1f) > 0.01;
     
     public void OnSpecial(InputAction.CallbackContext ctx) => _specialButtonDown = Math.Abs(ctx.ReadValue<float>() - 1f) > 0.01;
+    
+    public void OnMenu(InputAction.CallbackContext ctx) => _menuButtonDown = Math.Abs(ctx.ReadValue<float>() - 1f) > 0.01;
 }

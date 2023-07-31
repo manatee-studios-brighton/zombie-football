@@ -5,6 +5,7 @@ using System.Globalization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
@@ -35,6 +36,11 @@ public class GameController : MonoBehaviour
     private void Update()
     {
         _time += Time.deltaTime;
+
+        if (_time > 120f)
+        {
+            SceneManager.LoadScene("Scenes/MainMenu", LoadSceneMode.Single);
+        }
     }
 
     void FixedUpdate()
