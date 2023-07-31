@@ -1,16 +1,22 @@
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CharacterController : MonoBehaviour
 {
+    //Player attributes
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private float distToGround = 0.6f;
 
+    //Rig components
     [SerializeField] private ConfigurableJoint hipJoint;
     [SerializeField] private Rigidbody hip;
 
+    //Animator
     [SerializeField] private Animator targetAnimator;
 
+    //Animation state booleans
     private bool _walking;
     private bool _headering;
     private bool _jumping;
@@ -20,12 +26,22 @@ public class CharacterController : MonoBehaviour
     private bool _canJump = true;
     private bool _canKick = true;
     
+    //Animation bool hashes for efficiency
     private static readonly int AnimatorWalk = Animator.StringToHash("Walk");
     private static readonly int AnimatorHeader = Animator.StringToHash("Headering");
     private static readonly int AnimatorKick = Animator.StringToHash("Kicking");
+    
+    //Input vars
+    private Vector2 _movementInput;
+    private bool _kickButtonDown;
+    private bool _jumpButtonDown;
+    private bool _headerButtonDown;
+    private bool _specialButtonDown;
 
 
-    // Update is called once per frame
+    /*
+     * UNITY UPDATE CALLS
+     */
     void Update()
     {
         MoveCharacter();
@@ -37,6 +53,10 @@ public class CharacterController : MonoBehaviour
         CharacterKick();
         CharacterHeader();
     }
+    
+    /*
+     * CHARACTER MOVEMENT METHODS
+     */
 
     private bool IsGrounded()
     {
@@ -53,10 +73,7 @@ public class CharacterController : MonoBehaviour
 
     private void MoveCharacter()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+        Vector3 direction = new Vector3(_movementInput.x, 0f, _movementInput.y).normalized;
 
         if (direction.magnitude >= 0.1f)
         {
@@ -85,7 +102,7 @@ public class CharacterController : MonoBehaviour
         }
         
         //If able to jump and the button is pressed, disable the ability to jump and set currently jumping true
-        if (_canJump && Input.GetButton("Jump"))
+        if (_canJump && _jumpButtonDown)
         {
             _canJump = false;
             _jumping = true;
@@ -93,7 +110,7 @@ public class CharacterController : MonoBehaviour
         }
         
         //If not currently jumping and not pressing the button, set the ability to jump to be true
-        if (!_canJump && !Input.GetButton("Jump") && !_jumping)
+        if (!_canJump && !_jumpButtonDown && !_jumping)
         {
             _canJump = true;
         }
@@ -109,14 +126,14 @@ public class CharacterController : MonoBehaviour
         }
         
         //If able to kick and the button is pressed, disable the ability to header and set currently kicking true
-        if (_canKick && Input.GetButton("Kick"))
+        if (_canKick && _kickButtonDown)
         {
             _canKick = false;
             _kicking = true;
         }
         
         //If not currently kicking and not pressing the button, set the ability to kick to be true
-        if (!_canKick && !Input.GetButton("Kick") && !_kicking)
+        if (!_canKick && !_kickButtonDown && !_kicking)
         {
             _canKick = true;
         }
@@ -134,14 +151,14 @@ public class CharacterController : MonoBehaviour
         }
         
         //If able to header and the button is pressed, disable the ability to header and set currently headering true
-        if (_canHeader && Input.GetButton("Header"))
+        if (_canHeader && _headerButtonDown)
         {
             _canHeader = false;
             _headering = true;
         }
         
         //If not currently headering and not pressing the button, set the ability to header to be true
-        if (!_canHeader && !Input.GetButton("Header") && !_headering)
+        if (!_canHeader && !_headerButtonDown && !_headering)
         {
             _canHeader = true;
         }
@@ -149,4 +166,19 @@ public class CharacterController : MonoBehaviour
         //animate whether or not headering
         targetAnimator.SetBool(AnimatorHeader,_headering);
     }
+    
+    /*
+     * INPUT SYSTEM SET UP
+     */
+
+    public void OnMove(InputAction.CallbackContext ctx) => _movementInput = ctx.ReadValue<Vector2>();
+
+    public void OnJump(InputAction.CallbackContext ctx) => _jumpButtonDown = Math.Abs(ctx.ReadValue<float>() - 1f) > 0.01;
+
+    public void OnHeader(InputAction.CallbackContext ctx) =>
+        _headerButtonDown = Math.Abs(ctx.ReadValue<float>() - 1f) > 0.01;
+    
+    public void OnKick(InputAction.CallbackContext ctx) => _kickButtonDown = Math.Abs(ctx.ReadValue<float>() - 1f) > 0.01;
+    
+    public void OnSpecial(InputAction.CallbackContext ctx) => _specialButtonDown = Math.Abs(ctx.ReadValue<float>() - 1f) > 0.01;
 }
