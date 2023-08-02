@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private GameObject chub;
+    public GameObject[] players;
     
     // Start is called before the first frame update
     void Start()
@@ -13,8 +14,23 @@ public class CameraController : MonoBehaviour
     }
 
     // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
     void FixedUpdate()
     {
-        transform.rotation = Quaternion.LookRotation(chub.transform.position - transform.position);
+        Vector3 averagePlayerPosition = Vector3.zero;
+
+        foreach (GameObject player in players)
+        {
+            averagePlayerPosition += player.transform.position;
+        }
+
+        if(players.Length != 0)
+            averagePlayerPosition /= players.Length;
+        
+        transform.rotation = Quaternion.LookRotation(averagePlayerPosition - transform.position);
     }
 }
