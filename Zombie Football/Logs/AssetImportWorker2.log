@@ -1,0 +1,589 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.1f1 (3b70a0754835) revision 3895456'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19043) 64bit Core' Language: 'en' Physical Memory: 16333 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.1f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+E:/UnityProjects/zombie-football/Zombie Football
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+2020
+Successfully changed project path to: E:/UnityProjects/zombie-football/Zombie Football
+E:/UnityProjects/zombie-football/Zombie Football
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 144.39 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.1f1 (3b70a0754835)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.1f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/UnityProjects/zombie-football/Zombie Football/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1e89)
+    Vendor:   NVIDIA
+    VRAM:     5958 MB
+    Driver:   31.0.15.3623
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.1f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.1f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56080
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.1f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.1f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.1f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.014517 seconds.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 175.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.483 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1484ms)
+		BeginReloadAssembly (131ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (979ms)
+			LoadAssemblies (112ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (403ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (481ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (76ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (176ms)
+				BeforeProcessingInitializeOnLoad (3ms)
+				ProcessInitializeOnLoadAttributes (154ms)
+				ProcessInitializeOnLoadMethodAttributes (72ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006992 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\UnityProjects\zombie-football\Zombie Football\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image E:\UnityProjects\zombie-football\Zombie Football\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 155.10 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.136 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2137ms)
+		BeginReloadAssembly (304ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (156ms)
+		EndReloadAssembly (1684ms)
+			LoadAssemblies (154ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (408ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (87ms)
+			SetupLoadedEditorAssemblies (995ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (26ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (155ms)
+				BeforeProcessingInitializeOnLoad (145ms)
+				ProcessInitializeOnLoadAttributes (563ms)
+				ProcessInitializeOnLoadMethodAttributes (92ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 2.35 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5837 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 37 unused Assets / (0.8 MB). Loaded Objects now: 6297.
+Memory consumption went from 229.4 MB to 228.6 MB.
+Total: 6.407400 ms (FindLiveObjects: 0.769400 ms CreateObjectMapping: 0.439800 ms MarkObjects: 4.683300 ms  DeleteObjects: 0.511700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 5116014.389207 seconds.
+  path: Assets/Prefabs/HavanaStreet
+  artifactKey: Guid(62be75916e31fde48976769bbd1a1d35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet using Guid(62be75916e31fde48976769bbd1a1d35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05bce1fe14c1956f391802cf4aed0a41') in 0.023905 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.752277 seconds.
+  path: Assets/Prefabs/HavanaStreet/cagefence1 Variant.prefab
+  artifactKey: Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/cagefence1 Variant.prefab using Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88202aee1bcef5270dcd518cac5ded42') in 0.317384 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.524173 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence.prefab
+  artifactKey: Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence.prefab using Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20a82e2c8468f74dd366e007c5640860') in 0.030261 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.697482 seconds.
+  path: Assets/Prefabs/HavanaStreet/cagedoor1 Variant.prefab
+  artifactKey: Guid(3ee19cabcbfa314488b4033670fb8acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/cagedoor1 Variant.prefab using Guid(3ee19cabcbfa314488b4033670fb8acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c580d91e4cf9371889c3da9f5cc42993') in 0.069017 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.816402 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence With Door.prefab
+  artifactKey: Guid(3ee19cabcbfa314488b4033670fb8acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence With Door.prefab using Guid(3ee19cabcbfa314488b4033670fb8acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '574b133e61e20d0171a8cf58d570328e') in 0.039658 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.043250 seconds.
+  path: Assets/Scenes/HavanaStreet.unity
+  artifactKey: Guid(a5341bf2b3f907141b0351a7b182acac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/HavanaStreet.unity using Guid(a5341bf2b3f907141b0351a7b182acac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f7f99e56d6b2bedd8d9b1b6318b2952') in 0.012459 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 28.490021 seconds.
+  path: Assets/Models/cagedoor1.blend
+  artifactKey: Guid(d4c800c07e1e1694692f94fa8e2b134c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/cagedoor1.blend using Guid(d4c800c07e1e1694692f94fa8e2b134c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f259c80971e2a101067ea990f998c644') in 2.065735 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Models/Chub1.fbx
+  artifactKey: Guid(a46520dc5fdb31442a18971b4edb976d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Chub1.fbx using Guid(a46520dc5fdb31442a18971b4edb976d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b3e01b0e542a6fe3cb222577878e51b') in 0.574968 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.698478 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence With Door.prefab
+  artifactKey: Guid(3ee19cabcbfa314488b4033670fb8acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence With Door.prefab using Guid(3ee19cabcbfa314488b4033670fb8acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06fe659cb23f7f29c31001ba9fce1c51') in 0.034403 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 30.024882 seconds.
+  path: Assets/Materials/HavanaStreet/Fence.mat
+  artifactKey: Guid(54a4e3f88c674f04c9f74e0abda88c89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/HavanaStreet/Fence.mat using Guid(54a4e3f88c674f04c9f74e0abda88c89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b1b11dab66ad33eac6a24835958ecba') in 0.026743 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 38.628654 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence.prefab
+  artifactKey: Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence.prefab using Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e235a801d1238c3a9d2783ff11d08c80') in 0.026236 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.501534 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence.prefab
+  artifactKey: Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence.prefab using Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0553b1ad2b36a5246e6c0e8bab73489') in 0.031775 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.150848 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence.prefab
+  artifactKey: Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence.prefab using Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b82794c391dbb5509a876b19e9fcfb9') in 0.030906 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 147.769183 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence With Door.prefab
+  artifactKey: Guid(3ee19cabcbfa314488b4033670fb8acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence With Door.prefab using Guid(3ee19cabcbfa314488b4033670fb8acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48c8a430f957bb59da31beebbabb5df2') in 0.031944 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007432 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\UnityProjects\zombie-football\Zombie Football\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image E:\UnityProjects\zombie-football\Zombie Football\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.26 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Error saving file Library/StateCache/LayerSettings/9e/9ecc5c3c162a7aba29bafa64c8b94b7c.json. Error: System.IO.IOException: Sharing violation on path E:\UnityProjects\zombie-football\Zombie Football\Library\StateCache\LayerSettings\9e\9ecc5c3c162a7aba29bafa64c8b94b7c.json
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x0019e] in <6073cf49ed704e958b8a66d540dea948>:0 
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <6073cf49ed704e958b8a66d540dea948>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+  at System.IO.StreamWriter..ctor (System.String path, System.Boolean append, System.Text.Encoding encoding, System.Int32 bufferSize) [0x00055] in <6073cf49ed704e958b8a66d540dea948>:0 
+  at System.IO.StreamWriter..ctor (System.String path, System.Boolean append, System.Text.Encoding encoding) [0x00000] in <6073cf49ed704e958b8a66d540dea948>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamWriter..ctor(string,bool,System.Text.Encoding)
+  at System.IO.File.WriteAllText (System.String path, System.String contents, System.Text.Encoding encoding) [0x00034] in <6073cf49ed704e958b8a66d540dea948>:0 
+  at UnityEditor.StateCache`1[T].SetState (UnityEngine.Hash128 key, T obj) [0x0004b] in <1135c66e5f4c41a7831fa5798849d8b6>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.StateCache`1<UnityEditor.Tools/LayerSettings>:SetState (UnityEngine.Hash128,UnityEditor.Tools/LayerSettings)
+UnityEditor.Tools:set_lockedLayers (int)
+UnityEditor.Tools:OnEnable ()
+UnityEngine.ScriptableObject:CreateInstance (System.Type)
+UnityEngine.ScriptableObject:CreateInstance<UnityEditor.Tools> ()
+UnityEditor.Tools:get_get ()
+UnityEditor.Tools:get_visibleLayers ()
+UnityEditor.Animations.Rigging.BoneRendererUtils:.cctor () (at Library/PackageCache/com.unity.animation.rigging@1.1.1/Editor/Utils/BoneRendererUtils.cs:121)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Library/PackageCache/com.unity.animation.rigging@1.1.1/Editor/Utils/BoneRendererUtils.cs Line: 121)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.671 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1672ms)
+		BeginReloadAssembly (178ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (50ms)
+		EndReloadAssembly (1367ms)
+			LoadAssemblies (141ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (402ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (70ms)
+			SetupLoadedEditorAssemblies (682ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (45ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (119ms)
+				ProcessInitializeOnLoadAttributes (399ms)
+				ProcessInitializeOnLoadMethodAttributes (102ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.55 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5726 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (0.8 MB). Loaded Objects now: 6345.
+Memory consumption went from 237.9 MB to 237.1 MB.
+Total: 5.447000 ms (FindLiveObjects: 0.604200 ms CreateObjectMapping: 0.188700 ms MarkObjects: 4.151300 ms  DeleteObjects: 0.500600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 281.403014 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence With Door.prefab
+  artifactKey: Guid(3ee19cabcbfa314488b4033670fb8acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence With Door.prefab using Guid(3ee19cabcbfa314488b4033670fb8acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '739c747ee003c1afac07040638ed0955') in 0.100960 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.717931 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence.prefab
+  artifactKey: Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence.prefab using Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9a3468312a8a3840d38124b200a9d92') in 0.027263 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.343030 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence.prefab
+  artifactKey: Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence.prefab using Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a4f6b3e61d6fca7604783800e5d4467') in 0.031689 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.408717 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence.prefab
+  artifactKey: Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence.prefab using Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df10511db4bbccf1257d2f87990c1d41') in 0.032301 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.692728 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence With Door.prefab
+  artifactKey: Guid(3ee19cabcbfa314488b4033670fb8acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence With Door.prefab using Guid(3ee19cabcbfa314488b4033670fb8acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c87c8ad5fb47e74c15647f62169e566d') in 0.029651 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.330999 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence.prefab
+  artifactKey: Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence.prefab using Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16092861f455b3f191656784efc94f43') in 0.026821 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.953660 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence.prefab
+  artifactKey: Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence.prefab using Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71a8d9a76d1ceb702d531d3801241c59') in 0.017458 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.541130 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence.prefab
+  artifactKey: Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence.prefab using Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '184ff6be8837face1419738c6baa9aea') in 0.032910 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.833050 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence.prefab
+  artifactKey: Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence.prefab using Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f111c3f9c21696b28cbcfc749afee3b8') in 0.016577 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.815869 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence.prefab
+  artifactKey: Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence.prefab using Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b66ead313f3c48fafd7ccf61c074e696') in 0.025318 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.574478 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence.prefab
+  artifactKey: Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence.prefab using Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aadd01304c68de87b0aba1fc4a5fdbb8') in 0.018115 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.387501 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence.prefab
+  artifactKey: Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence.prefab using Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd601ba48f10dc6b88c310e1c3ef4005a') in 0.023317 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.809150 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence.prefab
+  artifactKey: Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence.prefab using Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '248347bdb63065183d4671ec02533b18') in 0.041246 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.181279 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence.prefab
+  artifactKey: Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence.prefab using Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '511b10886c18de8f1f59ef88ac28a3e3') in 0.038182 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.767056 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence.prefab
+  artifactKey: Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence.prefab using Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30a032033a2f231740ccb288271b7e47') in 0.030513 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.607213 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence.prefab
+  artifactKey: Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence.prefab using Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caccf9826364e80dc17951e248556f62') in 0.027200 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.060544 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence.prefab
+  artifactKey: Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence.prefab using Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '819bf9c348840a5631f394d101ec4ac5') in 0.029399 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 33.202954 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence With Door.prefab
+  artifactKey: Guid(3ee19cabcbfa314488b4033670fb8acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence With Door.prefab using Guid(3ee19cabcbfa314488b4033670fb8acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da13bc0cb9108d12d522fd9b0be33a66') in 0.047313 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.432528 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence With Door.prefab
+  artifactKey: Guid(3ee19cabcbfa314488b4033670fb8acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence With Door.prefab using Guid(3ee19cabcbfa314488b4033670fb8acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'effa8a3cf18d5f6f17f39916ae0ef79b') in 0.037476 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009345 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\UnityProjects\zombie-football\Zombie Football\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image E:\UnityProjects\zombie-football\Zombie Football\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.26 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.702 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1703ms)
+		BeginReloadAssembly (181ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (52ms)
+		EndReloadAssembly (1377ms)
+			LoadAssemblies (148ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (405ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (70ms)
+			SetupLoadedEditorAssemblies (690ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (44ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (123ms)
+				ProcessInitializeOnLoadAttributes (397ms)
+				ProcessInitializeOnLoadMethodAttributes (107ms)
+				AfterProcessingInitializeOnLoad (16ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.36 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5726 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (0.8 MB). Loaded Objects now: 6349.
+Memory consumption went from 237.9 MB to 237.2 MB.
+Total: 5.311100 ms (FindLiveObjects: 0.558300 ms CreateObjectMapping: 0.286600 ms MarkObjects: 3.995000 ms  DeleteObjects: 0.469600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 71.481632 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence With Door.prefab
+  artifactKey: Guid(3ee19cabcbfa314488b4033670fb8acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence With Door.prefab using Guid(3ee19cabcbfa314488b4033670fb8acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16e7ef73ba08b195542af2a549f1dd06') in 0.109489 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.074438 seconds.
+  path: Assets/Prefabs/HavanaStreet/Cage Fence.prefab
+  artifactKey: Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HavanaStreet/Cage Fence.prefab using Guid(678564381ae19684390465c605da5016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efc4e34280ad373481c20e6245e05548') in 0.032150 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007242 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\UnityProjects\zombie-football\Zombie Football\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image E:\UnityProjects\zombie-football\Zombie Football\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.30 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.779 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1781ms)
+		BeginReloadAssembly (169ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (47ms)
+		EndReloadAssembly (1483ms)
+			LoadAssemblies (131ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (468ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (68ms)
+			SetupLoadedEditorAssemblies (752ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (46ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (118ms)
+				ProcessInitializeOnLoadAttributes (467ms)
+				ProcessInitializeOnLoadMethodAttributes (102ms)
+				AfterProcessingInitializeOnLoad (15ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.29 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5726 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (0.8 MB). Loaded Objects now: 6353.
+Memory consumption went from 238.0 MB to 237.2 MB.
+Total: 5.164200 ms (FindLiveObjects: 0.630100 ms CreateObjectMapping: 0.212800 ms MarkObjects: 3.806300 ms  DeleteObjects: 0.513300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

@@ -9,6 +9,7 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private float distToGround = 0.6f;
+    [SerializeField] private bool isChub = true;
 
     //Rig components
     [SerializeField] private ConfigurableJoint hipJoint;
@@ -84,7 +85,7 @@ public class CharacterController : MonoBehaviour
         {
             float targetAngle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
 
-            hipJoint.targetRotation = Quaternion.Euler(0f, targetAngle, 0f);
+            hipJoint.targetRotation = Quaternion.Euler(0f, isChub ? targetAngle : 0f, isChub ? 0f : targetAngle);
 
             hip.AddForce(direction * speed);
 
