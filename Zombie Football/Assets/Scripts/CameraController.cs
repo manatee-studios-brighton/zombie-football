@@ -5,32 +5,45 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public GameObject[] players;
+    [SerializeField] private float rotationSpeed = 10f;
     
-    // Start is called before the first frame update
-    void Start()
+    public List<GameObject> players;
+    public GameObject ball;
+
+    private Vector3 averagePlayerPosition;
+
+    // LateUpdate for camera movement
+    void LateUpdate()
     {
-        
+        CameraZoom();
+        CameraRotate();
     }
 
-    // Update is called once per frame
-    void Update()
+    void CameraRotate()
     {
+        averagePlayerPosition = ball.transform.position * players.Count; //Weight average in favour of ball
         
-    }
-
-    void FixedUpdate()
-    {
-        Vector3 averagePlayerPosition = Vector3.zero;
-
         foreach (GameObject player in players)
         {
-            averagePlayerPosition += player.transform.position;
+            averagePlayerPosition += player.transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).transform.position; //Train-wreck, I know
         }
 
-        if(players.Length != 0)
-            averagePlayerPosition /= players.Length;
+        if(players.Count != 0) //Protect from division by 0
+            averagePlayerPosition /= players.Count * 2; //count doubled because of ball weighting
+
+        Quaternion targetRotation = Quaternion.LookRotation(averagePlayerPosition - transform.position);
         
-        transform.rotation = Quaternion.LookRotation(averagePlayerPosition - transform.position);
+        transform.rotation =  Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed *  Time.deltaTime); //slerped so no smooth rotate
+    }
+
+    void CameraZoom()
+    {
+        //MAYBE DO THIS?
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawSphere(averagePlayerPosition,1);
     }
 }
