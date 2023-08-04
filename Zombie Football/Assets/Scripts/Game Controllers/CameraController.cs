@@ -12,6 +12,15 @@ public class CameraController : MonoBehaviour
 
     private Vector3 averagePlayerPosition;
 
+    private void Start()
+    {
+        foreach(var player in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            players.Add(player.transform.GetChild(0).gameObject);
+        }
+        
+    }
+
     // LateUpdate for camera movement
     void LateUpdate()
     {

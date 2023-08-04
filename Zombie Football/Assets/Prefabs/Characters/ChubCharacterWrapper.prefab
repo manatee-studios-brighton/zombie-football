@@ -4280,9 +4280,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228a5a1620e293742b1889cec207591c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 25
   jumpForce: 50
   distToGround: 0.6
+  isChub: 1
   hipJoint: {fileID: 3665618218166287651}
   hip: {fileID: 3665618218166287650}
   targetAnimator: {fileID: 5977272592600483684}
@@ -5282,7 +5283,7 @@ GameObject:
   - component: {fileID: 6787733951425006810}
   m_Layer: 6
   m_Name: ChubCharacterWrapper
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
