@@ -18,7 +18,7 @@ public class MainMenuCamera : MonoBehaviour
     void Update()
     {
         Vector3 targetPosition = target.position;
-        Vector3 axis = (Vector3.up + Vector3.forward + Vector3.right);
+        Vector3 axis = Vector3.up + Vector3.forward + Vector3.right;
         transform.RotateAround(targetPosition, axis, speed * Time.deltaTime);
     }
 }
