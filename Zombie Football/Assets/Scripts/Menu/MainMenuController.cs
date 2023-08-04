@@ -39,7 +39,7 @@ public class MainMenuController : MonoBehaviour
         foreach (var player in players)
         {
             var activeRagdoll = player.transform.GetChild(0);
-            activeRagdoll.position = new Vector3(i%2==0?-15:15, 5, 0);
+            activeRagdoll.position = new Vector3(i%2==0?-15:15, 15, 0);
             
             SetMaterialColor(activeRagdoll.gameObject, i%2==0?Color.red:Color.blue);
             i++;
@@ -81,6 +81,22 @@ public class MainMenuController : MonoBehaviour
             
             if(renderer!=null)
                 renderer.materials[0].SetColor($"_Color",color);
+        }
+    }
+
+    void ResetRigidBodies(GameObject gameObject)
+    {
+        int numOfChildren = gameObject.transform.childCount;
+        for(int i = 0; i < numOfChildren; i++)
+        {
+            GameObject child = gameObject.transform.GetChild(i).gameObject;
+            Rigidbody rigidbody = child.GetComponent<Rigidbody>();
+
+            if (rigidbody != null)
+            {
+                rigidbody.velocity = Vector3.zero;
+                rigidbody.angularVelocity = Vector3.zero;
+            }
         }
     }
 

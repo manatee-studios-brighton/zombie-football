@@ -24,10 +24,14 @@ public class GoalChecker : MonoBehaviour
         if (other.gameObject.CompareTag($"Ball"))
         {
             goalScored = true;
-            other.gameObject.transform.position = new Vector3(0, 5, 0);
+            GameObject ball = other.gameObject;
             
             Rigidbody rb = other.GetComponent<Rigidbody>();
             rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            
+            transform.rotation = Quaternion.Euler(Vector3.zero);
+            ball.transform.position = new Vector3(0, 5, 0);
         }
     }
 }
